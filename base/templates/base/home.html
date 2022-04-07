@@ -1,18 +1,20 @@
 {% extends 'base/main.html' %} {% load static %} {% block content %}
 
 <section class="hero">
-  <div class="hero--content">
-    <div class="hero--content--intro">
-      <img id="profile_pic" src="{% static 'images/pro.jpg' %}" />
-      <h1 class="intro--name">
-        AbenezerN <br />
-        Nachew
-      </h1>
-    </div>
+  <div style="object-fit: cover" class="container">
+    <div class="hero--content">
+      <div class="hero--content--intro">
+        <img id="profile_pic" src="{% static 'images/pro.jpg' %}" />
+        <p style="font-size: 84px; line-height: 0.9em; font-weight: 400">
+          Abenezer<br />
+          Nachew
+        </p>
+      </div>
 
-    <div class="hero--content--subheadline">
-      <h3 class="description">FullStack Developer</h3>
-      <p class="slogan">I teach people how to code and build cool things</p>
+      <div class="hero--content--subheadline">
+        <h3 class="description">FullStack Developer</h3>
+        <p class="slogan">I teach people how to code and build cool things</p>
+      </div>
     </div>
   </div>
 </section>
@@ -85,11 +87,11 @@
 <section class="section--2">
   <div class="skills--container">
     <h3>Endorsements</h3>
+    {% if request.user.is_authenticated %}
     <a class="btn btn-primary my-3" href="{% url 'add-endorsement' %}"
       >Add Endorsement</a
     >
-
-    {% for i in endorsements %}
+    {% endif %} {% for i in endorsements %}
     <div style="margin-bottom: 1em" class="card">
       <div class="card-body">
         <h5>{{i.name}}</h5>
