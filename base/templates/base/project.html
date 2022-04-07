@@ -26,7 +26,8 @@
       <h3>Comments ({{count}})</h3>
       <hr />
       <form method="post">
-        {% csrf_token %} {% for field in form %}
+        {% csrf_token %}
+        {% for field in form %}
         <div class="mb-3">
           <label for="exampleInputPassword1" class="form-label"
             >{{field.label}}</label

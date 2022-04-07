@@ -112,4 +112,14 @@ def addEndorsement(request):
     context = {'form': form}
     return render(request, 'base/endorsement_form.html', context)
 
+def addComment(request):
+    form = CommentForm()
 
+    if request.method == 'POST':
+        form = ProjectForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('project')
+
+    context = {'form': form}
+    return render(request, 'base/project.html', context)
