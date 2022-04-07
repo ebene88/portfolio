@@ -27,15 +27,15 @@ body{
 }
 
 .hero{
-    background-color: #288bdb;
+    background-color: #1F2428;
     min-height: 70vh;
     color: #fff;
 
 }
 
 #profile_pic{
-    height: 200px;
-    width: 200px;
+    height: 300px;
+    width: 300px;
     object-fit: cover;
     border-radius: 50%;
 }
@@ -160,7 +160,8 @@ body{
 }
 
 
-.project--image{
+.project--imagep{
+    display:block;
     max-width: 800px;
 }
 
@@ -168,6 +169,8 @@ body{
     display: block;
     max-width: 600px;
     margin: 0 auto;
+    padding: 0px 80px;
+
 }
 
 @media (max-width:900px){
@@ -203,11 +206,14 @@ body{
 
 
 @media (max-width:400px){
-
+ .skills--container{
+        width: 100%;
+    }
 
     .skill--wrapper{
         flex-flow: column;
 
     }
+
 }
 
