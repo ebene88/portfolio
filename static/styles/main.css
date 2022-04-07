@@ -169,7 +169,7 @@ body{
     display: block;
     max-width: 600px;
     margin: 0 auto;
-    padding: 0px 80px;
+    padding: 0px 20px;
 
 }
 
@@ -210,10 +210,7 @@ body{
         width: 100%;
     }
 
-    .skill--wrapper{
-        flex-flow: column;
-
-    }
+   
 
 }
 
