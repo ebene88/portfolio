@@ -15,8 +15,8 @@ body{
 }
 
 .navigation-bar{
-    background-color: #354955;
-    height: 50px;
+    background-color:#006666;
+    height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,7 +28,7 @@ body{
 
 .hero{
     background-color: #1F2428;
-    min-height: 70vh;
+    min-height: 60vh;
     color: #fff;
 
 }
@@ -165,6 +165,16 @@ body{
     max-width: 800px;
 }
 
+.about--wrapper{
+
+    margin:40px;
+    padding: 10px;
+    height: 250px;
+}
+.endorsement--container{
+    margin:80px;
+    padding: 0px 40px;
+}
 .contact--form{
     display: block;
     max-width: 600px;
