@@ -15,8 +15,8 @@ body{
 }
 
 .navigation-bar{
-    background-color: #354955;
-    height: 50px;
+    background-color:#006666;
+    height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,14 +28,14 @@ body{
 
 .hero{
     background-color: #1F2428;
-    min-height: 70vh;
+    min-height: 60vh;
     color: #fff;
 
 }
 
 #profile_pic{
-    height: 200px;
-    width: 200px;
+    height: 300px;
+    width: 300px;
     object-fit: cover;
     border-radius: 50%;
 }
@@ -55,13 +55,13 @@ body{
     margin-bottom: 3em;
 }
 
-/* .namea{
-    font-size: 84px;
-    letter-spacing: .10em;
-    font-weight: 600;
-    line-height: .5em;
+.intro--name{
+    font-size: 100px;
+    letter-spacing: .1em;
+    font-weight: 700;
+    line-height: .9em;
 
-} */
+}
 
 .description{
     font-size: 65px;
@@ -129,7 +129,7 @@ body{
 }
 
 .skill--wrapper{
-    width: 600px;
+  
 
     margin-top: 2em;
     margin-bottom: 2em;
@@ -140,7 +140,7 @@ body{
 }
 
 .skill--logo{
-    height: 10px;
+    
     width: 60px;
     object-fit: contain;
 }
@@ -160,14 +160,27 @@ body{
 }
 
 
-.project--image{
-    width: auto;
+.project--imagep{
+    display:block;
+    max-width: 800px;
 }
 
+.about--wrapper{
+
+    margin:40px;
+    padding: 10px;
+    height: 250px;
+}
+.endorsement--container{
+    margin:80px;
+    padding: 0px 40px;
+}
 .contact--form{
     display: block;
     max-width: 600px;
     margin: 0 auto;
+    padding: 0px 20px;
+
 }
 
 @media (max-width:900px){
@@ -203,11 +216,11 @@ body{
 
 
 @media (max-width:400px){
-
-
-    .skill--wrapper{
-        flex-flow: column;
-
+ .skills--container{
+        width: 100%;
     }
+
+
+
 }
 

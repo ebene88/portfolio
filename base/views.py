@@ -3,6 +3,7 @@ from .models import Project, Skill, Message, Endorsement
 from .forms import ProjectForm, MessageForm, SkillForm, EndorsementForm, CommentForm
 from django.contrib import messages
 
+
 # Create your views here.
 
 

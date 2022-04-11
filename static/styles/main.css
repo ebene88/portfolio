@@ -1,22 +1,26 @@
 body{
-    background-color: #E5E5E5;
+    background-color: #fff;
 }
 
 .section--1{
-    background-color: #fff;
+    background-color:#004d80;
     padding-top: 2em;
     padding-bottom: 2em;
+
 }
 
 .section--2{
     background-color: #E5E5E5;
     padding-top: 2em;
     padding-bottom: 2em;
-}
+    margin: 10px 60px 10px 60px;
+
+    border-radius: 30px;
+    }
 
 .navigation-bar{
     background-color:#006666;
-    height: 60px;
+    height: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,14 +32,15 @@ body{
 
 .hero{
     background-color: #1F2428;
-    min-height: 60vh;
+    min-height: 50vh;
     color: #fff;
+    border-radius:0px 0px 10px 10px;
 
 }
 
 #profile_pic{
-    height: 300px;
-    width: 300px;
+    height: 250px;
+    width: 250px;
     object-fit: cover;
     border-radius: 50%;
 }
@@ -44,6 +49,8 @@ body{
     width: 800px;
     margin: 0 auto;
     padding: 3em;
+    border-radius:10px;
+
 }
 
 .hero--content--intro{
@@ -64,7 +71,7 @@ body{
 }
 
 .description{
-    font-size: 65px;
+    font-size: 45px;
     text-align: center;
 }
 
@@ -73,13 +80,24 @@ body{
     text-align: center;
 }
 
+.myproject{
+    margin:25px;
+    padding: 30px 0px;
+    background-color:#E5E5E5;
+    border-radius: 5px;
+    height: 500px;
+
+}
+
 .projects--wrapper{
     display: flex;
-    justify-content: flex-start;
+    justify-content: safe;
     gap: 2em;
-    margin-top: 2em;
+    margin-top: 4em;
     margin-bottom: 2em;
+    margin-left: 2em;
     overflow-x: auto;
+
 
 }
 
@@ -126,10 +144,13 @@ body{
     width: 600px;
     margin: 0 auto;
     padding: 1em;
+    background-color:#006666;
+    border-radius: 20px;
+    color: #ffff;
 }
 
 .skill--wrapper{
-  
+
 
     margin-top: 2em;
     margin-bottom: 2em;
@@ -140,9 +161,10 @@ body{
 }
 
 .skill--logo{
-    
-    width: 60px;
+    background-color: #ffff;
+    width: 80px;
     object-fit: contain;
+    border-radius:30%;
 }
 
 .other--skills--wrapper{
@@ -152,7 +174,7 @@ body{
 }
 
 .skill--tag{
-    background-color: #C4E7F2;
+    background-color: #006666;
     width: fit-content;
     padding: 3px 20px;
     border-radius: 20px;
@@ -166,21 +188,43 @@ body{
 }
 
 .about--wrapper{
-
+    background-color: #333333;
+    color: #ffff;
     margin:40px;
     padding: 10px;
-    height: 250px;
+    height: auto;
+    border-radius: 20px;
 }
 .endorsement--container{
-    margin:80px;
+    margin:0px 80px;
     padding: 0px 40px;
+
+
 }
+
+.cardl-body{
+ width:auto;
+ height:auto;
+ justify-content: center;
+    background-color: #006666;
+    border-radius: 20px;
+    color: #ffff;
+}
+
 .contact--form{
     display: block;
     max-width: 600px;
     margin: 0 auto;
     padding: 0px 20px;
 
+}
+.mybtn{
+    background-color: #006666;
+    color: #ffff;
+    border-radius:10px;
+    border-style:none;
+    width: 85px;
+    height: 40px;
 }
 
 @media (max-width:900px){

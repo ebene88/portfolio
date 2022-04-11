@@ -2,10 +2,13 @@
 
 <section class="hero">
   <div style="object-fit: cover" class="container">
+
     <div class="hero--content">
+
       <div class="hero--content--intro">
-        <img id="profile_pic" src="{% static 'images/pro.jpg' %}" />
-        <p style="font-size: 84px; line-height: 0.9em; font-weight: 400">
+         <img id="profile_pic"  src="{% static 'images/pro.jpg' %}" />
+
+        <p style="font-size: 54px; line-height: 0.9em; font-weight: 400">
           Abenezer<br />
           N. Umeta
         </p>
@@ -19,9 +22,12 @@
   </div>
 </section>
 
-<section class="container section--2">
-  <h3>My Projects</h3>
-  <h5>Projects that makes my journey worthwhile</h5>
+<section class="container section-2">
+  <div id="myproject" class="myproject">
+
+
+  <h3 style="text-align:center;">My Projects</h3>
+  <h5 style="text-align:center;">Projects that makes my journey worthwhile</h5>
   <div class="projects--wrapper">
     {% for project in projects %}
     <div style="display: inline-block" class="project--column">
@@ -38,12 +44,12 @@
     {% endfor %}
   </div>
 
-
+</div>
 </section>
 
-<section class="section--1">
-  <div class="skills--container">
-    <h1>&emsp;&emsp;&emsp;Skills</h1>
+<section class="section-1">
+  <div id="myskill" class="skills--container">
+    <h1 style="text-align:center;">Skills</h1>
 
     {% for skill in detailedSkills %}
     <div class="skill--wrapper">
@@ -68,8 +74,8 @@
   </div>
 </section>
 <div class="container">
-  <div class="about--wrapper">
-    <h3>More About Me</h3>
+  <div id="myabout" class="about--wrapper">
+    <h3 style="text-align:center;">More About Me</h3>
 
     <p>
       Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -86,26 +92,29 @@
     </p>
   </div>
 </div>
-<section class="section--1">
+<section class="section-1">
   <div class="endorsement--container">
-    <h3>Endorsements</h3>
+    <h3 style="text-align: center;" >Endorsements</h3>
     {% if request.user.is_authenticated %}
     <a class="btn btn-primary my-3" href="{% url 'add-endorsement' %}"
       >Add Endorsement</a
     >
-    {% endif %} {% for i in endorsements %}
-    <div style="margin-bottom: 1em" class="card">
-      <div class="card-body">
-        <h5>{{i.name}}</h5>
-        <p>{{i.body}}</p>
+    {% endif %}
+    <div class="endorsementme">
+    {% for i in endorsements %}
+    <div style="margin-bottom: 1em; " class="cardl">
+      <div class="cardl-body">
+        <h5 style="text-align: left;margin:13px">{{i.name}}</h5>
+        <p style="font-style:italic; margin:13px;">{{i.body}}</p>
       </div>
     </div>
     {% endfor %}
+      </div>
   </div>
 </section>
 
 <section class="section--2">
-  <div class="container">
+  <div id="mycontact" class="container">
     <h3 style="text-align:center;">Contact</h3>
     <form class="contact--form" method="POST">
       {% csrf_token %} {% for field in form %}
@@ -119,7 +128,7 @@
 
       {% endfor %}
 
-      <input class="btn btn-primary" type="submit" value="submit" />
+      <input class="mybtn"  type="submit" value="submit" />
     </form>
   </div>
 </section>
