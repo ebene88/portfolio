@@ -196,8 +196,8 @@ body{
     border-radius: 20px;
 }
 .endorsement--container{
-    margin:0px 80px;
-    padding: 0px 40px;
+    margin:0px 0px;
+    padding: 0px 0px;
 
 
 }
@@ -206,16 +206,17 @@ body{
  width:auto;
  height:auto;
  justify-content: center;
-    background-color: #006666;
-    border-radius: 20px;
-    color: #ffff;
+  background-color: #006666;
+  border-radius: 20px;
+  color: #ffff;
 }
 
 .contact--form{
     display: block;
-    max-width: 600px;
+    width: auto;
+    height:auto;
     margin: 0 auto;
-    padding: 0px 20px;
+    padding: 0px 0px;
 
 }
 .mybtn{
