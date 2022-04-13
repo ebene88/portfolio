@@ -1,134 +1,127 @@
 {% extends 'base/main.html' %} {% load static %} {% block content %}
 
 <section class="hero">
-  <div style="object-fit: cover" class="container">
+    <div style="object-fit: cover" class="container">
 
-    <div class="hero--content">
+        <div class="hero--content">
 
-      <div class="hero--content--intro">
-         <img id="profile_pic"  src="{% static 'images/pro.jpg' %}" />
+            <div class="hero--content--intro">
+                <img id="profile_pic" src="{% static 'images/pro.jpg' %}"/>
 
-        <p style="font-size: 44px; line-height: 0.9em; font-weight: 400">
-          Abenezer<br />
-          N. Umeta
-        </p>
-      </div>
+                <p style="font-size: 44px; line-height: 0.9em; font-weight: 400">
+                    Abenezer<br/>
+                    N. Umeta
+                </p>
+            </div>
 
-      <div class="hero--content--subheadline">
-        <h3 class="description">FullStack Developer</h3>
-        <p class="slogan">I teach people how to code and build cool things</p>
-      </div>
+            <div class="hero--content--subheadline">
+                <h3 class="description">FullStack Developer</h3>
+                <p class="slogan">Web Application Development with Django Framework</p>
+            </div>
+        </div>
     </div>
-  </div>
 </section>
 
 
-  <div id="myproject" class="myproject">
+<div id="myproject" class="myproject">
 
 
-  <h3 style="text-align:center;">My Projects</h3>
-  <h5 style="text-align:center;">Projects that makes my journey worthwhile</h5>
-  <div class="projects--wrapper">
-    {% for project in projects %}
-    <div style="display: inline-block" class="project--column">
-      <a href="{% url 'project' project.id %}">
-        <img class="project--thumbnail" src="{{project.thumbnail.url}}" />
-      </a>
-      <div class="project--body">
-        <h5>{{project.title}}</h5>
-      </div>
+    <h3 style="text-align:center;">My Projects</h3>
+    <h5 style="text-align:center;">Projects that makes my journey worthwhile</h5>
+    <div class="projects--wrapper">
+        {% for project in projects %}
+        <div style="display: inline-block" class="project--column">
+            <a href="{% url 'project' project.id %}">
+                <img class="project--thumbnail" src="{{project.thumbnail.url}}"/>
+            </a>
+            <div class="project--body">
+                <h5>{{project.title}}</h5>
+            </div>
+        </div>
+        {% empty %}
+
+        <h3 style="text-align:center;">There are no projects posted yet.</h3>
+        {% endfor %}
     </div>
-    {% empty %}
-
-    <h3>There are no projects in the database...</h3>
-    {% endfor %}
-  </div>
 
 </div>
 
 
 <section class="section-1">
-  <div id="myskill" class="skills--container">
-    <h1 style="text-align:center;">Skills</h1>
+    <div id="myskill" class="skills--container">
+        <h1 style="text-align:center;">Skills</h1>
 
-    {% for skill in detailedSkills %}
-    <div class="skill--wrapper">
-      {% if skill.logo %}
-      <img class="skill--logo" src="{{skill.logo.url}}" />
-      {% endif %}
-      <div>
-        <h5>{{skill.title}}</h5>
-        <p>{{skill.body}}</p>
-      </div>
-    </div>
-    {% endfor %}
+        {% for skill in detailedSkills %}
+        <div class="skill--wrapper">
+            {% if skill.logo %}
+            <img class="skill--logo" src="{{skill.logo.url}}"/>
+            {% endif %}
+            <div>
+                <h5>{{skill.title}}</h5>
+                <p>{{skill.body}}</p>
+            </div>
+        </div>
+        {% endfor %}
 
-    <h4>Other Skills</h4>
-    <div class="other--skills--wrapper">
-      {% for skill in skills %}
-      <div class="skill--tag">
-        <span>{{skill.title}}</span>
-      </div>
-      {% endfor %}
+        <h4>Other Skills</h4>
+        <div class="other--skills--wrapper">
+            {% for skill in skills %}
+            <div class="skill--tag">
+                <span>{{skill.title}}</span>
+            </div>
+            {% endfor %}
+        </div>
     </div>
-  </div>
 </section>
 <div class="container">
-  <div id="myabout" class="about--wrapper">
-    <h3 style="text-align:center;">More About Me</h3>
+    <div id="myabout" class="about--wrapper">
+        <h3 style="text-align:center;">More About Me</h3>
 
-    <p>
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-      Lorem Ipsum has been the industry's standard dummy text ever since the
-      1500s, when an unknown printer took a galley of type and scrambled it to
-      make a type specimen book.
-    </p>
-    <p>
-      It has survived not only five centuries, but also the leap into electronic
-      typesetting, remaining essentially unchanged. It was popularised in the
-      1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-      and more recently with desktop publishing software like Aldus PageMaker
-      including versions of Lorem Ipsum.
-    </p>
-  </div>
+        <p style="text-align:center;">
+            I'm a proficient problem solver and computer programmer specializing in web application development, from
+            ideas to real business applications. I have a computer science bachelor's degree. I'm working on Python and
+            the popular Python framework, Django.
+        </p>
+
+    </div>
 </div>
 <section class="section-1">
-  <div class="endorsement--container">
-    <h3 style="text-align: center;" >Endorsements</h3>
-    {% if request.user.is_authenticated %}
-    <a class="btn btn-primary my-3" href="{% url 'add-endorsement' %}"
-      >Add Endorsement</a
-    >
-    {% endif %}
-    <div class="container endorsementme">
-    {% for i in endorsements %}
-    <div style="margin-bottom: 1em; " class="cardl">
-      <div class="cardl-body">
-        <h5 style="text-align: left;margin:13px">{{i.name}}</h5>
-        <p style="font-style:italic; margin:13px;">{{i.body}}</p>
-      </div>
+    <div class="endorsement--container">
+        <h3 style="text-align: center;">Endorsements</h3>
+        {% if request.user.is_authenticated %}
+        <a class="btn btn-primary my-3" href="{% url 'add-endorsement' %}"
+        >Add Endorsement</a
+        >
+        {% endif %}
+        <div class="container endorsementme">
+            {% for i in endorsements %}
+            <div style="margin-bottom: 1em; " class="cardl">
+                <div class="cardl-body">
+                    <h5 style="text-align: left;margin:13px">{{i.name}}</h5>
+                    <p style="font-style:italic; margin:13px;">{{i.body}}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
     </div>
-    {% endfor %}
-      </div>
-  </div>
 </section>
 
 <section class="section--2">
 
     <h3 style="text-align:center;">Contact</h3>
     <form class="contact--form" method="POST">
-      {% csrf_token %} {% for field in form %}
+        {% csrf_token %} {% for field in form %}
 
-      <div class="mb-3">
-        <label form="exampleInputPassword1" class="form-label"
-          >{{field.label}}</label
-        >
-        {{field}}
-      </div>
+        <div class="mb-3">
+            <label form="exampleInputPassword1" class="form-label"
+            >{{field.label}}</label
+            >
+            {{field}}
+        </div>
 
-      {% endfor %}
+        {% endfor %}
 
-      <input class="mybtn"  type="submit" value="submit" />
+        <input class="mybtn" type="submit" value="submit"/>
     </form>
 
 </section>

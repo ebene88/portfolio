@@ -32,7 +32,7 @@ body{
 }
 
 .hero{
-    background-image: url("../images/screen.jpeg");
+    background-image: url("../images/computer.jpg");
 
     min-height: 50vh;
     color: #fff;
@@ -81,6 +81,7 @@ body{
     font-size: 24px;
     text-align: center;
     margin-bottom: 0px;
+
 }
 
 .myproject{
@@ -168,9 +169,10 @@ body{
 
 .skill--logo{
     background-color: #ffff;
-    width: 80px;
-    object-fit: contain;
-    border-radius:30%;
+    width: 150px;
+    height:100px;
+    object-fit: cover;
+    border-radius:20%;
 }
 
 .other--skills--wrapper{
@@ -180,7 +182,7 @@ body{
 }
 
 .skill--tag{
-    background-color: #006666;
+    background-color: #001a1a;
     width: fit-content;
     padding: 3px 20px;
     border-radius: 20px;
@@ -194,11 +196,13 @@ body{
 }
 
 .about--wrapper{
-    background-color: #333333;
+    background-color:  #334d4d;
     color: #ffff;
-    margin:30px 10px;
+    margin:60px auto;
     padding: 10px;
+    width: 600px;
     height: auto;
+
     border-radius: 20px;
 }
 .endorsement--container{
@@ -207,18 +211,28 @@ body{
 
 
 }
+.endorsementme{
 
+  background-color: #006666;
+  display: flex;
+  width:auto;
+     justify-content: center;
+
+}
 .cardl-body{
- width:auto;
+  align-items:center;
+
+ width:300px;
  height:auto;
  justify-content: center;
-  background-color: #006666;
+  background-color:#004d4d ;
   border-radius: 20px;
   color: #ffff;
+ margin:1em;
 }
 
 .contact--form{
-    display: block;
+
     width: auto;
     height:auto;
     margin: 0 auto;
@@ -249,6 +263,16 @@ body{
         grid-template-columns: 1fr ;
 
 
+    }
+    .endorsementme{
+        display:block;
+    }
+    .cardl-body{
+        width:auto;
+        display: inline-block;
+    }
+    .about--wrapper{
+     width:400px;
     }
 }
 
